@@ -5,7 +5,6 @@ function moveitlearn_start_session() {
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
         if( !isset( $_SESSION["courses"] ) ) $_SESSION["courses"] = get_moodle_courses();
-        print_r($_SESSION['courses']);
     }
 }
 
@@ -63,6 +62,7 @@ function moveitlearn_theme_taxonomies() {
 function get_moodle_courses() {
     $moodle_url = 'https://moveitlearn.com/belajar/webservice/rest/server.php';
     $token = get_option( 'moodle_api_token' );
+    print_r( $token );
     $function = 'core_course_get_courses';
 
     $params = array(
