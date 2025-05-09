@@ -62,7 +62,6 @@ function moveitlearn_theme_taxonomies() {
 function get_moodle_courses() {
     $moodle_url = 'https://moveitlearn.com/belajar/webservice/rest/server.php';
     $token = get_option( 'moodle_api_token' );
-    print_r( $token );
     $function = 'core_course_get_courses';
 
     $params = array(
