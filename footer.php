@@ -30,17 +30,22 @@ $courses = isset( $_SESSION["courses"] ) ? $_SESSION["courses"] : die( "Couldn't
                 </div>
             </div>
             <div class="footer-menu">
-                <div class="footer-menu-title">Komunitas Kami</div>
+                <div class="footer-menu-title">Komunitas</div>
                 <div class="footer-menu-items-wrapper">
+                    <?php wp_nav_menu( array( 'theme_location' => 'komunitas-menu', 'menu_class' => 'topbar-menu')); ?>
                 </div>
             </div>
             <div class="footer-menu">
                 <div class="footer-menu-title">AIDRAN</div>
-                <div class="footer-menu-items-wrapper"></div>
+                <div class="footer-menu-items-wrapper">
+                    <?php wp_nav_menu( array( 'theme_location' => 'aidran-menu', 'menu_class' => 'topbar-menu')); ?>
+                </div>
             </div>
             <div class="footer-menu">
                 <div class="footer-menu-title">Sumber Daya</div>
-                <div class="footer-menu-items-wrapper"></div>
+                <div class="footer-menu-items-wrapper">
+                    <?php wp_nav_menu( array( 'theme_location' => 'sumber-daya-menu', 'menu_class' => 'topbar-menu')); ?>
+                </div>
             </div>
         </div>
         <div class="footer-inner-btm-wrapper">
