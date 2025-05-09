@@ -90,7 +90,7 @@ add_action( 'wp_enqueue_scripts', 'moveitlearn_theme_styles' );
 add_action( 'init', 'moveitlearn_theme_taxonomies' );
 add_action( 'init', 'moveitlearn_theme_menus' );
 add_action( 'init', 'moveitlearn_start_session', 1 );
-add_action( 'after_switch_theme', 'moveitlearn_set_default_options' );
+// add_action( 'after_switch_theme', 'moveitlearn_set_default_options' );
 
 
 // Misc. functionality
