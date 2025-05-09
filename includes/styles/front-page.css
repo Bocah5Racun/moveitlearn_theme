@@ -334,7 +334,7 @@
   flex-direction: column;
   gap: 0.5rem;
   font-size: clamp(16px, 2vw, 20px);
-  width: clamp(440px, 60%, 1024px);
+  width: clamp(320px, 60%, 1024px);
 }
 
 .cerita-baik-cards-wrapper {
