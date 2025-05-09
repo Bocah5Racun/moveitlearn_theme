@@ -53,11 +53,11 @@ function moveitlearn_theme_taxonomies() {
 }
 
 // // get moodle courses
-// function moveitlearn_set_default_options() {
-//     if (get_option('moodle_api_token') === false) {
-//         update_option('moodle_api_token', 'a334bffb1704c9bda260efab58a15459');
-//     }
-// }
+function moveitlearn_set_default_options() {
+    if (get_option('moodle_api_token') === false) {
+        update_option('moodle_api_token', 'a334bffb1704c9bda260efab58a15459');
+    }
+}
 
 function get_moodle_courses() {
     $moodle_url = 'https://moveitlearn.com/belajar/webservice/rest/server.php';
@@ -90,7 +90,7 @@ add_action( 'wp_enqueue_scripts', 'moveitlearn_theme_styles' );
 add_action( 'init', 'moveitlearn_theme_taxonomies' );
 add_action( 'init', 'moveitlearn_theme_menus' );
 add_action( 'init', 'moveitlearn_start_session', 1 );
-// add_action( 'after_switch_theme', 'moveitlearn_set_default_options' );
+add_action( 'after_switch_theme', 'moveitlearn_set_default_options' );
 
 
 // Misc. functionality
