@@ -1,0 +1,253 @@
+/*
+
+Theme Name: Move It Learn
+Author: Andi Nuruljihad @ KOMKOM.id
+Author URI: https://komkom.id/
+Description: Move It Learn is an online learning theme that serves as the landing page for a Moodle backend.
+Version: 1.0
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+.m-1 {
+  margin: 0.5rem;
+}
+.m-2 {
+  margin: 1rem;
+}
+.m-3 {
+  margin: 1.5rem;
+}
+.m-4 {
+  margin: 2rem;
+}
+.m-5 {
+  margin: 2.5rem;
+}
+.m-6 {
+  margin: 3rem;
+}
+.m-7 {
+  margin: 3.5rem;
+}
+.m-8 {
+  margin: 4rem;
+}
+
+.my-1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.my-3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.my-4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.my-5 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.my-6 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.my-7 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+.my-8 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
+.p-3 {
+  padding: 1.5rem;
+}
+.p-4 {
+  padding: 2rem;
+}
+.p-5 {
+  padding: 2.5rem;
+}
+.p-6 {
+  padding: 3rem;
+}
+.p-7 {
+  padding: 3.5rem;
+}
+.p-8 {
+  padding: 4rem;
+}
+
+.py-1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.py-5 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.py-6 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.py-7 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+.py-8 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  color: #2c2c2c;
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #00449e;
+  line-height: 112%;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 105%;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  font-size: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 100ms;
+}
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+.btn:hover {
+  text-decoration: none;
+}
+.btn--clear {
+  border-color: rgba(0, 0, 0, 0);
+  color: #00449e;
+  text-decoration: underline;
+}
+.btn--clear:hover {
+  text-decoration: none;
+}
+.btn--yellow {
+  color: #2c2c2c;
+  background-color: #e7a534;
+  border-color: #e7a534;
+}
+.btn--yellow:hover {
+  background-color: #2c2c2c;
+  color: #e7a534;
+}
+.btn--purple {
+  color: #fff;
+  background-color: #bd94f4;
+  border-color: #bd94f4;
+}
+.btn--purple:hover {
+  background-color: #5e10c5;
+}
+.btn--blue {
+  color: #fff;
+  background-color: #00449e;
+  border-color: #00449e;
+}
+.btn--blue:hover {
+  background-color: #2c2c2c;
+}
+.btn--outline {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #00449e;
+  color: #00449e;
+}
+
+icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+icon[type=certificate] {
+  background-image: url("./includes/imgs/sertifikat.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}/*# sourceMappingURL=style.css.map */
