@@ -76,7 +76,7 @@ function get_moodle_courses() {
         return 'API request failed: ' . $response->get_error_message();
     }
 
-    $courses = json_decode(wp_remote_retrieve_body( $response ), true );
+    $courses = json_decode(wp_remote_retrieve_body( $response ) );
 
     return array_slice( $courses, 1 );
 }
