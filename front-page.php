@@ -17,7 +17,6 @@ $images_hero_query = new WP_Query( array(
 );
 
 $token = get_option( 'moodle_api_token' );
-print( "This is the token: {$token}" );
 
 // get all moodle courses
 $courses = isset( $_SESSION["courses"] ) ? $_SESSION["courses"] : die( "Couldn't find courses." );
