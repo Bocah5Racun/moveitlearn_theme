@@ -1,8 +1,12 @@
 <?php
 
 // session start
-if( session_status() !== PHP_SESSION_ACTIVE ) session_start();
-if( !isset( $_SESSION["courses"] ) ) $_SESSION["courses"] = get_moodle_courses();
+function moveitlearn_start_session() {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+        if( !isset( $_SESSION["courses"] ) ) $_SESSION["courses"] = get_moodle_courses();
+    }
+}
 
 // Move It Learn styles
 function moveitlearn_theme_styles() {
@@ -49,9 +53,12 @@ function moveitlearn_theme_taxonomies() {
 }
 
 // get moodle courses
-if (!get_option( 'moodle_api_token' )) {
-    update_option( 'moodle_api_token', 'a334bffb1704c9bda260efab58a15459' );
+function moveitlearn_set_default_options() {
+    if (get_option('moodle_api_token') === false) {
+        update_option('moodle_api_token', 'a334bffb1704c9bda260efab58a15459');
+    }
 }
+
 function get_moodle_courses() {
     $moodle_url = 'https://moveitlearn.com/belajar/webservice/rest/server.php';
     $token = get_option( 'moodle_api_token' );
@@ -82,6 +89,8 @@ function get_moodle_url() {
 add_action( 'wp_enqueue_scripts', 'moveitlearn_theme_styles' );
 add_action( 'init', 'moveitlearn_theme_taxonomies' );
 add_action( 'init', 'moveitlearn_theme_menus' );
+add_action( 'init', 'moveitlearn_start_session', 1 );
+add_action( 'after_switch_theme', 'moveitlearn_set_default_options' );
 
 
 // Misc. functionality
