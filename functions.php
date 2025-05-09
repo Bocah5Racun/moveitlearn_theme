@@ -5,6 +5,7 @@ function moveitlearn_start_session() {
     if (session_status() === PHP_SESSION_NONE) {
         session_start();
         if( !isset( $_SESSION["courses"] ) ) $_SESSION["courses"] = get_moodle_courses();
+        print_r($_SESSION['courses']);
     }
 }
 
