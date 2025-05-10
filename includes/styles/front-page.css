@@ -333,8 +333,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: clamp(16px, 2vw, 20px);
-  width: clamp(320px, 60%, 1024px);
+  font-size: clamp(18px, 2vw, 20px);
+  width: clamp(320px, 80vw, 65ch);
 }
 
 .cerita-baik-cards-wrapper {
@@ -345,6 +345,11 @@
   -webkit-overflow-scrolling: touch;
   width: 100%;
   overflow-y: hidden;
+}
+@media (max-width: 768px) {
+  .cerita-baik-cards-wrapper {
+    gap: 0;
+  }
 }
 
 .cerita-baik-card {
@@ -361,8 +366,7 @@
 }
 @media (max-width: 768px) {
   .cerita-baik-card {
-    flex: 1 0 calc(100vw - 3rem);
-    width: auto;
+    flex: 1 0 100%;
   }
 }
 
@@ -408,6 +412,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-size: clamp(16px, 2vw, 20px);
   gap: 2rem;
   max-width: 65ch;
 }
