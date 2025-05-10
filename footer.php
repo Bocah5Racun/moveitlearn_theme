@@ -46,7 +46,10 @@
             <div class="footer-copyright">
                 © 2025<?= date("Y") > 2025 ? '–'.date("Y") : ''; ?> Australia-Indonesia Disability Research and Advocacy Network. All rights reserved. Designed by <a href="https://komkom.id">KOMKOM.id</a> in collaboration with <a href="https://fisipupri.ac.id">FISIP Universitas Pejuang Republik Indonesia</a>.
             </div>
-            <div class="footer-socials"></div>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/aidran_/" target="_new"><img src="<?= get_template_directory_uri(); ?>/includes/imgs/instagram-social.png" alt="Follow AIDRAN di Instagram" class="icon-socials"></a>
+                <a href="https://www.linkedin.com/company/aidran" target="_new"><img src="<?= get_template_directory_uri(); ?>/includes/imgs/linkedin-social.png" alt="Kunjungi profil LinkedIn AIDRAN" class="icon-socials"></a>
+            </div>
         </div>
     </div>
 </footer>

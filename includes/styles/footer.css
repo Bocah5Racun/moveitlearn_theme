@@ -189,10 +189,22 @@ footer a:hover {
 }
 
 .footer-inner-btm-wrapper {
+  align-items: center;
   border-top: 1px solid #dbdbdb;
   display: flex;
   font-size: 0.825rem;
   justify-content: space-between;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
+}
+
+.footer-socials {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-socials {
+  aspect-ratio: 1;
+  width: 36px;
 }/*# sourceMappingURL=footer.css.map */
