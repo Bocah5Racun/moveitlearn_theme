@@ -1,10 +1,4 @@
-<?php
-
-// get all moodle courses
-$courses = isset( $_SESSION["courses"] ) ? $_SESSION["courses"] : die( "Couldn't find courses." );
-
-?>
-
+<?php global $courses; ?>
 <footer id="footer">
     <div class="container">
 
@@ -17,7 +11,7 @@ $courses = isset( $_SESSION["courses"] ) ? $_SESSION["courses"] : die( "Couldn't
                             foreach( $courses as $course ):
                         ?>
     
-                        <li><a href="https://moveitlearn.com/belajar/course/view.php?id=<?= $course->id; ?>"><?= $course->fullname; ?></a></li>
+                        <li><a href="https://moveitlearn.com/belajar/course/view.php?id=<?= $course['id']; ?>"><?= $course['fullname']; ?></a></li>
     
                         <?php endforeach; ?>
                     </ul>

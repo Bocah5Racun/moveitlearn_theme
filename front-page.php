@@ -19,7 +19,8 @@ $images_hero_query = new WP_Query( array(
 $token = get_option( 'moodle_api_token' );
 
 // get all moodle courses
-$courses = isset( $_SESSION["courses"] ) ? $_SESSION["courses"] : die( "Couldn't find courses." );
+global $courses;
+$courses = get_moodle_courses();
 
 // get the hero image
 if( $images_hero_query->have_posts() ) {
@@ -60,13 +61,13 @@ get_header();
             ?>
             <div class="module-card">
                 <div class="module-info">
-                    <a href="https://moveitlearn.com/belajar/course/view.php?id=<?= $course->id; ?>">
-                        <img src="" alt="" class="module-course-image">
+                    <a href="https://moveitlearn.com/belajar/course/view.php?id=<?= $course['id']; ?>">
+                        <img src="<?= $course['courseimage'];?>" alt="" class="module-course-image">
                     </a>
-                    <a href="https://moveitlearn.com/belajar/course/view.php?id=<?= $course->id; ?>">
-                        <div class="module-title"><?= $course->displayname; ?></div>
+                    <a href="https://moveitlearn.com/belajar/course/view.php?id=<?= $course['id']; ?>">
+                        <div class="module-title"><?= $course['displayname']; ?></div>
                     </a>
-                    <div class="module-desc"><?= $course->summary; ?></div>
+                    <div class="module-desc"><?= $course['summary']; ?></div>
                 </div>
                 <div class="certificate-info">
                     <icon type="certificate"></icon> Bersertifikat

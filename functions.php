@@ -1,13 +1,5 @@
 <?php
 
-// session start
-function moveitlearn_start_session() {
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-        if( !isset( $_SESSION["courses"] ) ) $_SESSION["courses"] = get_moodle_courses();
-    }
-}
-
 // Move It Learn styles
 function moveitlearn_theme_styles() {
     wp_enqueue_style( 'main', get_stylesheet_uri(), array(), true, 'all' );
@@ -62,13 +54,15 @@ function moveitlearn_set_default_options() {
 function get_moodle_courses() {
     $moodle_url = 'https://moveitlearn.com/belajar/webservice/rest/server.php';
     $token = get_option( 'moodle_api_token' );
-    $function = 'core_course_get_courses';
+    $function = 'core_course_get_courses_by_field';
 
     $params = array(
         'wstoken' => $token,
         'wsfunction' => $function,
         'moodlewsrestformat' => 'json',
-    );
+        'field' => 'category',
+        'value' => 1,
+    );  
 
     $response = wp_remote_get($moodle_url . '?' . http_build_query($params));
 
@@ -76,9 +70,9 @@ function get_moodle_courses() {
         return 'API request failed: ' . $response->get_error_message();
     }
 
-    $courses = json_decode(wp_remote_retrieve_body( $response ) );
+    $result = json_decode(wp_remote_retrieve_body( $response ), true );
 
-    return array_slice( $courses, 1 );
+    return isset($result['courses']) ? $result['courses'] : [];
 }
 
 function get_moodle_url() {
@@ -89,7 +83,6 @@ function get_moodle_url() {
 add_action( 'wp_enqueue_scripts', 'moveitlearn_theme_styles' );
 add_action( 'init', 'moveitlearn_theme_taxonomies' );
 add_action( 'init', 'moveitlearn_theme_menus' );
-add_action( 'init', 'moveitlearn_start_session', 1 );
 add_action( 'after_switch_theme', 'moveitlearn_set_default_options' );
 
 
