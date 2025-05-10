@@ -193,9 +193,16 @@ footer a:hover {
   border-top: 1px solid #dbdbdb;
   display: flex;
   font-size: 0.825rem;
+  gap: 1rem;
   justify-content: space-between;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
+}
+@media (max-width: 480px) {
+  .footer-inner-btm-wrapper {
+    align-items: baseline;
+    flex-direction: column;
+  }
 }
 
 .footer-socials {
