@@ -54,6 +54,15 @@
     </div>
 </footer>
 
+<script>
+    const mobileMenu = document.getElementById("mobile-menu")
+
+    function toggleMenu() {
+        const mobileMenuState = mobileMenu.getAttribute('aria-expanded') === 'true'
+        mobileMenu.setAttribute('aria-expanded', !mobileMenuState)
+    }
+</script>
+
 <?php wp_footer(); ?>
 
 </body>
