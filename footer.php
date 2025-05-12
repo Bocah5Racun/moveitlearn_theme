@@ -4,7 +4,7 @@
 
         <div class="footer-inner-top-wrapper">
             <div class="footer-menu">
-                <div class="footer-menu-title">Modul Move It Learn</div>
+                <div class="footer-menu-title">Modul Move It Learn.</div>
                 <div class="footer-menu-items-wrapper">
                     <ul class="footer-modules-menu">
                         <?php

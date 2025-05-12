@@ -41,7 +41,7 @@ get_header();
         <p>Setiap siswa berhak mendapatkan pendidikan yang berkualitas. Belajar tentang hak dan praktik inklusi dalam pendidikan Indonesia dengan <b>modul bersertifikat gratis</b> Move It Learn.</p>
         <div id="hero-cta-box">
             <a href="https://moveitlearn.com/belajar" class="btn btn--blue">Dapatkan Sertifikat</a>
-            <a href="" class="btn btn--outline">Tentang Move It Learn</a>
+            <a href="" class="btn btn--outline">Tentang Move It Learn.</a>
         </div>
     </div>
     <div id="hero-image-wrapper">
