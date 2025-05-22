@@ -44,7 +44,7 @@
         </div>
         <div class="footer-inner-btm-wrapper">
             <div class="footer-copyright">
-                © 2025<?= date("Y") > 2025 ? '–'.date("Y") : ''; ?> Australia-Indonesia Disability Research and Advocacy Network. All rights reserved. Designed by <a href="https://komkom.id">KOMKOM.id</a> in collaboration with <a href="https://fisipupri.ac.id">FISIP Universitas Pejuang Republik Indonesia</a>.
+                © 2025<?= date("Y") > 2025 ? '–'.date("Y") : ''; ?> Australia-Indonesia Disability Research and Advocacy Network. All rights reserved. Designed by <a href="https://komkom.id">KOMKOM.id</a>.
             </div>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/aidran_/" target="_new"><img src="<?= get_template_directory_uri(); ?>/includes/imgs/instagram-social.png" alt="Follow AIDRAN di Instagram" class="icon-socials"></a>
