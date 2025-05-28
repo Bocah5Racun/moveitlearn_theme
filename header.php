@@ -1,4 +1,8 @@
-<?php global $courses; ?>
+<?php
+    // get all moodle courses
+    global $courses;
+    $courses = get_moodle_courses();
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>

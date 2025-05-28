@@ -219,7 +219,7 @@
 
 .module-cards-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, clamp(200px, 20vw, 320px));
   gap: 1rem;
   justify-content: space-between;
 }

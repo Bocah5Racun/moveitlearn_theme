@@ -1,0 +1,17 @@
+#singular-main-wrapper {
+  padding: 4rem 0;
+}
+#singular-main-wrapper h1,
+#singular-main-wrapper h2,
+#singular-main-wrapper h3,
+#singular-main-wrapper h4 {
+  line-height: 1.7;
+  margin-bottom: 1.7rem;
+}
+#singular-main-wrapper .wp-block-columns {
+  margin: 1.7rem 0;
+}
+
+.square-image {
+  aspect-ratio: 1;
+}/*# sourceMappingURL=singular.css.map */

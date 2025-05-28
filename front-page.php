@@ -18,10 +18,6 @@ $images_hero_query = new WP_Query( array(
 
 $token = get_option( 'moodle_api_token' );
 
-// get all moodle courses
-global $courses;
-$courses = get_moodle_courses();
-
 // get the hero image
 if( $images_hero_query->have_posts() ) {
     while( $images_hero_query->have_posts() ) {
@@ -41,7 +37,6 @@ get_header();
         <p>Setiap siswa berhak mendapatkan pendidikan yang berkualitas. Belajar tentang hak dan praktik inklusi dalam pendidikan Indonesia dengan <b>modul bersertifikat gratis</b> Move It Learn.</p>
         <div id="hero-cta-box">
             <a href="https://moveitlearn.com/belajar" class="btn btn--blue">Belajar Sekarang</a>
-            <a href="" class="btn btn--clear">Tentang Move It Learn.</a>
         </div>
     </div>
     <div id="hero-image-wrapper">
