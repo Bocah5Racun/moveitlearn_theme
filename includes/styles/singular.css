@@ -1,5 +1,6 @@
 #singular-main-wrapper {
   padding: 4rem 0;
+  width: clamp(360px, 100%, 990px);
 }
 #singular-main-wrapper h1,
 #singular-main-wrapper h2,
@@ -7,6 +8,14 @@
 #singular-main-wrapper h4 {
   line-height: 1.7;
   margin-bottom: 1.7rem;
+}
+#singular-main-wrapper ol,
+#singular-main-wrapper ul {
+  margin: 0 0 1.7rem 0;
+}
+#singular-main-wrapper ol li,
+#singular-main-wrapper ul li {
+  list-style-position: inside;
 }
 #singular-main-wrapper .wp-block-columns {
   margin: 1.7rem 0;
