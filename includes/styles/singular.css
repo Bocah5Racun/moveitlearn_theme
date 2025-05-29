@@ -1,12 +1,21 @@
 #singular-main-wrapper {
   padding: 4rem 0;
   width: clamp(360px, 100%, 990px);
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  #singular-main-wrapper {
+    padding: 4rem 2rem;
+  }
 }
 #singular-main-wrapper h1,
 #singular-main-wrapper h2,
 #singular-main-wrapper h3,
 #singular-main-wrapper h4 {
   line-height: 1.7;
+  margin-bottom: 1.7rem;
+}
+#singular-main-wrapper p {
   margin-bottom: 1.7rem;
 }
 #singular-main-wrapper ol,
