@@ -2,12 +2,13 @@
 
 // Move It Learn styles
 function moveitlearn_theme_styles() {
-    wp_enqueue_style( 'main', get_stylesheet_uri(), array(), true, 'all' );
-    wp_enqueue_style( 'header', get_template_directory_uri() . '/includes/styles/header.css', array(), true, 'all' );
-    wp_enqueue_style( 'footer', get_template_directory_uri() . '/includes/styles/footer.css', array(), true, 'all' );
+    $theme_version = wp_get_theme()->get('Version'); // grab the theme version
+    wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $theme_version, 'all' );
+    wp_enqueue_style( 'header', get_template_directory_uri() . '/includes/styles/header.css', array(), $theme_version, 'all' );
+    wp_enqueue_style( 'footer', get_template_directory_uri() . '/includes/styles/footer.css', array(), $theme_version, 'all' );
 
-    if( is_front_page() ) wp_enqueue_style( 'front-page', get_template_directory_uri() . '/includes/styles/front-page.css', array(), true, 'all' );
-    if( is_singular() ) wp_enqueue_style( 'singular-page', get_template_directory_uri() . '/includes/styles/singular.css', array(), true, 'all' );
+    if( is_front_page() ) wp_enqueue_style( 'front-page', get_template_directory_uri() . '/includes/styles/front-page.css', array(), $theme_version, 'all' );
+    if( is_singular() ) wp_enqueue_style( 'singular-page', get_template_directory_uri() . '/includes/styles/singular.css', array(), $theme_version, 'all' );
 }
 
 // Move It Learn menus
