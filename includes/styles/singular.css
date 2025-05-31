@@ -1,21 +1,10 @@
 #singular-main-wrapper {
   padding: 4rem 0;
-  width: clamp(280px, 100%, 65ch);
-  font-size: 20px;
 }
 @media (max-width: 768px) {
   #singular-main-wrapper {
     padding: 4rem 2rem;
   }
-}
-#singular-main-wrapper h1,
-#singular-main-wrapper h2,
-#singular-main-wrapper h3,
-#singular-main-wrapper h4 {
-  margin-bottom: 1.7rem;
-}
-#singular-main-wrapper p:not(:last-child) {
-  margin-bottom: 1.7rem;
 }
 #singular-main-wrapper ol,
 #singular-main-wrapper ul {
@@ -27,32 +16,4 @@
 }
 #singular-main-wrapper .wp-block-columns {
   margin: 1.7rem 0;
-}
-
-.square-image {
-  aspect-ratio: 1;
-}
-
-.post-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85em;
-  padding: 2rem 0;
-}
-.post-wrapper:not(:last-child) {
-  border-bottom: 1px solid #dbdbdb;
-}
-
-.post-title {
-  margin-bottom: 0 !important;
-}
-
-.post-thumb {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
-  overflow: hidden;
 }/*# sourceMappingURL=singular.css.map */

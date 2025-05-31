@@ -6,19 +6,25 @@ get_header();
 
 ?>
 
-<main id="singular-main-wrapper" class="container">
+<main id="category-wrapper" class="container container--page">
     <h1 class="singular-title"><?= single_cat_title(); ?></h1>
-    <p><?= category_description(); ?></p>
-    <div class="column-wrapper">
+    <p class="category-desc"><?= category_description(); ?></p>
+
+    <div class="category-posts-wrapper">
 
     <?php foreach($all_posts as $post):
         $post_thumb_url = get_the_post_thumbnail_url( $post->ID );
     ?>
 
-    <div class="post-wrapper">
-        <img src="<?= $post_thumb_url; ?>" alt="" class="post-thumb">
-        <h4 class="post-title"><?= the_title(); ?></h4>
-        <p class="post-excerpt"><?= get_the_excerpt(); ?></p>
+    <div class="category-post">
+        <a href="<?= get_the_permalink(); ?>" class="category-link">
+            <img src="<?= $post_thumb_url; ?>" alt="" class="category-post-thumb">
+            <h4 class="category-post-title"><?= the_title(); ?></h4>
+        </a>
+        <div class="category-post-meta">
+            <span class="category-post-author"><?= get_author_name( $post->post_author ); ?></span> • <span class="category-post-date"><?= get_the_date(); ?></span>
+        </div>
+        <p class="category-post-excerpt"><?= get_the_excerpt(); ?></p>
     </div>
 
     <?php endforeach; ?>
