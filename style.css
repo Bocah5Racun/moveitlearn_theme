@@ -192,6 +192,9 @@ p:not(:last-child) {
   padding: 0 1rem;
   font-size: 18px;
 }
+.container--page {
+  margin: 4rem auto 8rem auto;
+}
 
 .btn {
   display: inline-block;
