@@ -1,8 +1,12 @@
 <?php
 
+$theme_version = wp_get_theme()->get('Version'); // grab the theme version
+
 // Move It Learn styles
 function moveitlearn_theme_styles() {
-    $theme_version = wp_get_theme()->get('Version'); // grab the theme version
+
+    global $theme_version;
+
     wp_enqueue_style( 'main', get_stylesheet_uri(), array(), $theme_version, 'all' );
     wp_enqueue_style( 'header', get_template_directory_uri() . '/includes/styles/header.css', array(), $theme_version, 'all' );
     wp_enqueue_style( 'footer', get_template_directory_uri() . '/includes/styles/footer.css', array(), $theme_version, 'all' );
@@ -10,6 +14,13 @@ function moveitlearn_theme_styles() {
     if( is_front_page() ) wp_enqueue_style( 'front-page', get_template_directory_uri() . '/includes/styles/front-page.css', array(), $theme_version, 'all' );
     if( is_singular() ) wp_enqueue_style( 'singular-page', get_template_directory_uri() . '/includes/styles/singular.css', array(), $theme_version, 'all' );
     if( is_category() ) wp_enqueue_style( 'category-page', get_template_directory_uri() . '/includes/styles/category.css', array(), $theme_version, 'all' );
+}
+
+function moveitlearn_theme_scripts() {
+
+    global $theme_version;
+    
+    if( is_singular() ) wp_enqueue_script( 'singular-script', get_template_directory_uri() . '/includes/scripts/progress-bar.js' , array(), $theme_version, true );
 }
 
 // Move It Learn menus
@@ -81,6 +92,7 @@ function get_moodle_url() {
 
 // Add actions
 add_action( 'wp_enqueue_scripts', 'moveitlearn_theme_styles' );
+add_action( 'wp_enqueue_scripts', 'moveitlearn_theme_scripts' );
 add_action( 'init', 'moveitlearn_theme_taxonomies' );
 add_action( 'init', 'moveitlearn_theme_menus' );
 add_action( 'after_switch_theme', 'moveitlearn_set_default_options' );

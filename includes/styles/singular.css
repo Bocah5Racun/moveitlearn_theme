@@ -44,4 +44,18 @@
      object-fit: cover;
   aspect-ratio: 16/9;
   margin: 0 auto;
+}
+
+#singular-progress-bar-container {
+  width: 100vw;
+  height: 5px;
+  background-color: #bd94f4;
+  position: sticky;
+  left: 0;
+}
+#singular-progress-bar-container #singular-progress-bar {
+  background-color: #00449e;
+  width: 0%;
+  height: 100%;
+  transition: 100ms width ease-in;
 }/*# sourceMappingURL=singular.css.map */

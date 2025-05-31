@@ -22,7 +22,7 @@ get_header();
             <h4 class="category-post-title"><?= the_title(); ?></h4>
         </a>
         <div class="category-post-meta">
-            <span class="category-post-author"><?= get_author_name( $post->post_author ); ?></span> • <span class="category-post-date"><?= get_the_date(); ?></span>
+            <span class="category-post-author"><?= get_author_name( $post->post_author ); ?></span> • <span class="category-post-date"><?= get_the_date(); ?></span> • <span class="category-post-reading-time"><?= reading_time(); ?></span>
         </div>
         <p class="category-post-excerpt"><?= get_the_excerpt(); ?></p>
     </div>
