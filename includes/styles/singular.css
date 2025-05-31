@@ -1,5 +1,6 @@
 #singular-main-wrapper {
   padding-bottom: 4rem;
+  width: clamp(320px, 100%, 90ch);
 }
 @media (max-width: 768px) {
   #singular-main-wrapper {
@@ -15,6 +16,15 @@
 #singular-main-wrapper ol li,
 #singular-main-wrapper ul li {
   list-style-position: inside;
+}
+#singular-main-wrapper figure {
+  margin: 3.4rem 0;
+}
+#singular-main-wrapper p {
+  width: clamp(280px, 100%, 65ch);
+  margin: 0 auto;
+  margin-bottom: 1.7rem;
+  line-height: 1.7;
 }
 #singular-main-wrapper .wp-block-columns {
   margin: 1.7rem 0;

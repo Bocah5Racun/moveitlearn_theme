@@ -186,23 +186,11 @@ p:not(:last-child) {
   margin-bottom: 1.7rem;
 }
 
-.text-container {
-  width: clamp(280px, 100%, 65ch);
-}
-
 .container {
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 1rem;
   font-size: 18px;
-}
-.container--page {
-  padding: 4rem 0;
-}
-@media (max-width: 768px) {
-  .container--page {
-    padding: 4rem 2rem;
-  }
 }
 
 .btn {
