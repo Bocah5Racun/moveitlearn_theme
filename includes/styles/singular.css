@@ -14,7 +14,7 @@
 #singular-main-wrapper h4 {
   margin-bottom: 1.7rem;
 }
-#singular-main-wrapper p {
+#singular-main-wrapper p:not(:last-child) {
   margin-bottom: 1.7rem;
 }
 #singular-main-wrapper ol,
@@ -31,4 +31,28 @@
 
 .square-image {
   aspect-ratio: 1;
+}
+
+.post-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85em;
+  padding: 2rem 0;
+}
+.post-wrapper:not(:last-child) {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.post-title {
+  margin-bottom: 0 !important;
+}
+
+.post-thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
 }/*# sourceMappingURL=singular.css.map */

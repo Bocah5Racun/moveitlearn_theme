@@ -8,7 +8,7 @@ function moveitlearn_theme_styles() {
     wp_enqueue_style( 'footer', get_template_directory_uri() . '/includes/styles/footer.css', array(), $theme_version, 'all' );
 
     if( is_front_page() ) wp_enqueue_style( 'front-page', get_template_directory_uri() . '/includes/styles/front-page.css', array(), $theme_version, 'all' );
-    if( is_singular() ) wp_enqueue_style( 'singular-page', get_template_directory_uri() . '/includes/styles/singular.css', array(), $theme_version, 'all' );
+    if( is_singular() || is_category() ) wp_enqueue_style( 'singular-page', get_template_directory_uri() . '/includes/styles/singular.css', array(), $theme_version, 'all' );
 }
 
 // Move It Learn menus
