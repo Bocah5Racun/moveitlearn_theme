@@ -1,9 +1,9 @@
 #singular-main-wrapper {
-  padding: 4rem 0;
+  padding: 0 0 2rem 0;
 }
 @media (max-width: 768px) {
   #singular-main-wrapper {
-    padding: 4rem 2rem;
+    padding: 2rem;
   }
 }
 #singular-main-wrapper ol,
@@ -18,10 +18,16 @@
   margin: 1.7rem 0;
 }
 
+.singular-title {
+  width: clamp(280px, 100%, 1024px);
+  margin: 2rem auto;
+  text-align: center;
+}
+
 .singular-featured-img {
   display: block;
   width: clamp(280px, 100%, 1024px);
-  height: auto;
+  height: clamp(400px, auto, 600px);
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 16/9;
