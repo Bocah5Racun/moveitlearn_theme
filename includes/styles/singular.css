@@ -1,9 +1,11 @@
 #singular-main-wrapper {
-  padding: 0 0 2rem 0;
+  padding-bottom: 4rem;
 }
 @media (max-width: 768px) {
   #singular-main-wrapper {
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 #singular-main-wrapper ol,
