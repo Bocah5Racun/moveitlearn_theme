@@ -16,4 +16,14 @@
 }
 #singular-main-wrapper .wp-block-columns {
   margin: 1.7rem 0;
+}
+
+.singular-featured-img {
+  display: block;
+  width: clamp(280px, 100%, 1024px);
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
 }/*# sourceMappingURL=singular.css.map */
