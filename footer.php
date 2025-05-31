@@ -24,12 +24,6 @@
                 </div>
             </div>
             <div class="footer-menu">
-                <div class="footer-menu-title">Komunitas</div>
-                <div class="footer-menu-items-wrapper">
-                    <?php wp_nav_menu( array( 'theme_location' => 'komunitas-menu', 'menu_class' => 'topbar-menu')); ?>
-                </div>
-            </div>
-            <div class="footer-menu">
                 <div class="footer-menu-title">AIDRAN</div>
                 <div class="footer-menu-items-wrapper">
                     <?php wp_nav_menu( array( 'theme_location' => 'aidran-menu', 'menu_class' => 'topbar-menu')); ?>
@@ -44,7 +38,7 @@
         </div>
         <div class="footer-inner-btm-wrapper">
             <div class="footer-copyright">
-                © 2025<?= date("Y") > 2025 ? '–'.date("Y") : ''; ?> Australia-Indonesia Disability Research and Advocacy Network. All rights reserved. Designed by <a href="https://komkom.id">KOMKOM.id</a>.
+                © 2025<?= date("Y") > 2025 ? '–'.date("Y") : ''; ?> Australia-Indonesia Disability Research and Advocacy Network. All rights reserved. Diinisiasi oleh Janisa Pascawati. Designed by <a href="https://komkom.id">KOMKOM.id</a>.
             </div>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/aidran_/" target="_new"><img src="<?= get_template_directory_uri(); ?>/includes/imgs/instagram-social.png" alt="Follow AIDRAN di Instagram" class="icon-socials"></a>

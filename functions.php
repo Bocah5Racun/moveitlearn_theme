@@ -17,7 +17,6 @@ function moveitlearn_theme_menus() {
         array(
             'topbar-menu'       => __( 'Topbar Menu' ),
             'moveit-menu'       => __( 'Proyek Move It Menu' ),
-            'komunitas-menu'    => __( 'Komunitas Kami Menu' ),
             'aidran-menu'       => __( 'AIDRAN Menu' ),
             'sumber-daya-menu'  => __( 'Sumber Daya Menu' ),
         )
