@@ -38,7 +38,12 @@
         </div>
         <div class="footer-inner-btm-wrapper">
             <div class="footer-copyright">
-                © 2025<?= date("Y") > 2025 ? '–'.date("Y") : ''; ?> Australia-Indonesia Disability Research and Advocacy Network. All rights reserved. Diinisiasi oleh Janisa Pascawati, Minerva Yanuar, Dwi Lestari, Cici Alfiah Linggawati. Designed by <a href="https://komkom.id">KOMKOM.id</a>.
+                <div class="footer-logo">
+                    <img src="<?= get_template_directory_uri() . '/includes/imgs/aidran-black-txt-no-full-name.png"' ;?>" alt="" class="footer-logo--aidran">
+                </div>
+                © 2025<?= date("Y") > 2025 ? '–'.date("Y") : ''; ?> Australia-Indonesia Disability Research and Advocacy Network. All rights reserved.<br>
+                Diinisiasi oleh Janisa Pascawati, Minerva Yanuar, Dwi Lestari, Cici Alfiah Linggawati.<br>
+                Designed by <a href="https://komkom.id">KOMKOM.id</a>.
             </div>
             <div class="footer-socials">
                 <a href="https://www.instagram.com/aidran_/" target="_new"><img src="<?= get_template_directory_uri(); ?>/includes/imgs/instagram-social.png" alt="Follow AIDRAN di Instagram" class="icon-socials"></a>

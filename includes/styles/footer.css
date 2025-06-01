@@ -141,6 +141,7 @@ footer a:hover {
 .footer-inner-top-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   font-size: 0.9rem;
   gap: 2rem;
 }
@@ -204,6 +205,14 @@ footer a:hover {
     align-items: baseline;
     flex-direction: column;
   }
+}
+
+.footer-logo--aidran {
+  width: 200px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .footer-socials {
