@@ -17,7 +17,7 @@ get_header();
     ?>
 
     <div class="category-post">
-        <a href="<?= get_the_permalink(); ?>" class="category-link">
+        <a href="<?= get_the_permalink(); ?>" class="category-post-link">
             <img src="<?= $post_thumb_url; ?>" alt="" class="category-post-thumb">
             <h4 class="category-post-title"><?= the_title(); ?></h4>
         </a>
