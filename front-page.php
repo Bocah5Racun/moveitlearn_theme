@@ -1,7 +1,7 @@
 <?php
 
 // get the hero image
-$images_hero = '';
+$images_hero;
 $images_hero_query = new WP_Query( array(
     'post_type'         => 'attachment',
     'posts_per_page'    => 1,
@@ -11,6 +11,21 @@ $images_hero_query = new WP_Query( array(
             'taxonomy'  => 'image_location',
             'field'     => 'name',
             'terms'     => 'hero',
+            )
+        ),
+    )
+);
+$images_mitra;
+
+$images_mitra_query = new WP_Query( array(
+    'post_type'         => 'attachment',
+    'post_status'       => 'any',
+    'orderby'          => 'rand',
+    'tax_query'         => array(
+        array(
+            'taxonomy'  => 'image_location',
+            'field'     => 'name',
+            'terms'     => 'mitra',
             )
         ),
     )
@@ -72,6 +87,30 @@ get_header();
         </div>
     </div>
 </section>
+
+<?php if( $images_mitra_query->have_posts() ): ?>
+
+<section id="partners-logo-container">
+    <div class="partners-logo-content-container text-center">
+        <h2>Mitra Move It</h2>
+        <div class="partners-logo-outer">
+            <div id="partners-logos-container">
+                <?php
+                
+                    while( $images_mitra_query->have_posts() ):
+                        $images_mitra_query->the_post();
+                        $images_mitra = wp_get_attachment_image_url( get_the_ID(), 'medium' );
+                ?>
+    
+                <img src="<?= $images_mitra; ?>" alt="" class="partners-logo">
+                
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php endif; ?>
 
 <section id="tentang-moveit">
     <div class="tentang-moveit-inner-wrapper container">
@@ -142,5 +181,47 @@ get_header();
         <img src="<?= get_template_directory_uri(); ?>/includes/imgs/bottom-cta-pic.png" alt="" class="bottom-cta-pic">
     </div>
 </section>
+
+<script>
+
+// scroll logos
+    const logosCtr = document.getElementById('partners-logos-container')
+    const parent = logosCtr.parentElement
+
+    const logosCtrWidth = logosCtr.offsetWidth
+    const parentWidth = parent.offsetWidth
+
+    let scrollSpeed = 0.5
+    let scrollPosition = 0
+    let isPaused = false
+
+    if( logosCtrWidth > parentWidth ) {
+        logosCtr.style.justifyContent = 'flex-start'
+        const clone = logosCtr.cloneNode()
+
+        parent.append(clone)
+    }
+
+    function animateScroll() {
+        if(!isPaused) {
+            scrollPosition += scrollSpeed
+    
+            if (scrollPosition >= parent.scrollWidth / 2) {
+                scrollPosition = 0; // reset to beginning
+            }
+            logosCtr.style.transform = `translateX(-${scrollPosition}px)`;
+        }
+        requestAnimationFrame(animateScroll);
+    }
+
+    animateScroll()
+
+    parent.addEventListener('mouseover', () => isPaused = true)
+    parent.addEventListener('touchstart', () => isPaused = true)
+    parent.addEventListener('mouseout', () => { isPaused = false })
+    parent.addEventListener('touchend', () => { isPaused = false })
+
+
+</script>
 
 <?php get_footer(); ?>

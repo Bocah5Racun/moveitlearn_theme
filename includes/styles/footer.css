@@ -175,13 +175,6 @@ footer a:hover {
   font-weight: 400;
 }
 
-.footer-collaboration {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: flex-end;
-}
-
 .collab-logos {
   display: flex;
   gap: 1rem;

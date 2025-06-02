@@ -455,4 +455,38 @@
   .bottom-cta-pic {
     width: 100%;
   }
+}
+
+#partners-logo-container {
+  margin: 4rem 0;
+}
+
+.partners-logo-content-container {
+  width: 100%;
+}
+
+.partners-logo-outer {
+  width: 100%;
+  overflow: hidden;
+}
+
+#partners-logos-container {
+  margin: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 100ms ease-in-out;
+}
+
+.partners-logo {
+  max-width: clamp(150px, 15vw, 250px);
+  max-height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=front-page.css.map */
