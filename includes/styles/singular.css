@@ -11,11 +11,13 @@
 }
 #singular-main-wrapper ol,
 #singular-main-wrapper ul {
-  margin: 0 0 1.7rem 0;
+  margin: 0 auto;
+  margin-bottom: 1.7rem;
 }
 #singular-main-wrapper ol li,
 #singular-main-wrapper ul li {
   list-style-position: inside;
+  max-width: 65ch;
 }
 #singular-main-wrapper figure {
   margin: 3.4rem 0;
