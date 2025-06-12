@@ -23,7 +23,7 @@
             width: clamp(380px, 100%, 65ch);
         }
 
-        #announcement-container > img {
+        img.custom-logo {
             width: 180px;
             height: auto;
         }
@@ -34,7 +34,7 @@
 
     <main id="announcement-container">
         <?php the_custom_logo(); ?>
-        <h1>Move It Learn Ditangguhkan</h1>
+        <h2>Move It Learn Ditangguhkan</h2>
         <div>
             <p>Kami dari Tim Move It dengan sedih mengumumkan bahwa Move It Learn ditangguhkan <b>atas keputusan Dewan Direksi AIDRAN untuk jangka waktu yang belum ditentukan.</b></p>
             <p>Kami mengucapkan terima kasih kepada semua pihak yang telah berkontribusi dalam pengembangan Move It Learn dan Proyek Move It. Permohonan maaf yang sebesar-besarnya kami sampaikan kepada siapa pun yang telah memberikan masukan demi menjadikan Move It Learn sebagai sarana yang lebih baik untuk pendidikan inklusi di Indonesia, serta kepada siapa pun yang saat ini sedang mengikuti salah satu kursus di platform ini.</p>
