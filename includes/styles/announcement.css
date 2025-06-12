@@ -1,7 +1,0 @@
-#announcement-container {
-  position: absolute;
-  width: clamp(380px, 100%, 65ch);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}/*# sourceMappingURL=announcement.css.map */
