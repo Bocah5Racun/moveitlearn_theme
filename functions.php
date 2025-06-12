@@ -12,8 +12,14 @@ function moveitlearn_theme_styles() {
     wp_enqueue_style( 'footer', get_template_directory_uri() . '/includes/styles/footer.css', array(), $theme_version, 'all' );
 
     if( is_front_page() ) wp_enqueue_style( 'front-page', get_template_directory_uri() . '/includes/styles/front-page.css', array(), $theme_version, 'all' );
+
     if( is_singular() ) wp_enqueue_style( 'singular-page', get_template_directory_uri() . '/includes/styles/singular.css', array(), $theme_version, 'all' );
+
     if( is_category() ) wp_enqueue_style( 'category-page', get_template_directory_uri() . '/includes/styles/category.css', array(), $theme_version, 'all' );
+
+    if( is_page_template( 'page-announcement.php' ) ) {
+        wp_enqueue_style( 'announcement-page', get_template_directory_uri() . '/includes/styles/announcement.css', array(), $theme_version, 'all' );
+    }
 }
 
 function moveitlearn_theme_scripts() {
